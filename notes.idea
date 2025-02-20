@@ -1,0 +1,85 @@
+mhmmm... I'm trying to do something complicated I guess.
+I just want to play symphony for myself which should be relatively simple.
+This keycode website is what I use to get the keycodes: https://www.toptal.com/developers/keycode
+
+I've got this. I'll finish this before I leave this library. I properly started 
+at about 11am. It's 1pm now. I paused for a while and went about the library.
+
+Oh yeah always remember <kbd>S</kbd> is an inline element
+
+New lessons
+
+In JavaScript, backticks (`` ) are used to create template literals (also called template strings). 
+They were introduced in ES6 (ECMAScript 2015) and provide several useful features:
+
+Multi-line strings:
+
+// With backticks
+let multiLine = `
+  This is a
+  multi-line
+  string
+`;
+
+// Without backticks (old way)
+let oldWay = "This is a\n" +
+  "multi-line\n" +
+  "string";
+
+
+***
+
+String interpolation (embedding expressions):
+
+let name = "John";
+let age = 30;
+
+// With backticks
+let text = `Hello, my name is ${name} and I'm ${age} years old`;
+
+// Without backticks (old way)
+let oldText = "Hello, my name is " + name + " and I'm " + age + " years old";
+
+***
+
+Expression evaluation inside ${...}:
+
+let a = 5;
+let b = 10;
+console.log(`Sum: ${a + b}`); // Output: Sum: 15
+console.log(`${a} times ${b} is ${a * b}`); // Output: 5 times 10 is 50
+
+***
+
+Nested templates:
+
+const nested = `${`Hello ${`World`}`}`;
+
+***
+
+Tagged templates 
+
+function myTag(strings, ...values) {
+    // Custom string processing
+    return "Something";
+}
+
+let result = myTag`Hello ${name}!`;
+
+
+Challenges
+_______
+
+While using https://www.toptal.com/developers/keycode was great. I ran into an unexpected challenge.
+I don't know it was woroking at first then stopped working for reasons unknown to me.
+Apparently keycodes have been depercated. 
+
+It's taken me about 4 hours to build this now following the tutorials. I have to go back
+and understand more about the javascript I just wrote
+
+L L K : /G H J K : J G A K H 
+
+
+Day 2
+Oh God I don't even understand what is going on with the clock thing. It's working but I don't get the full
+logic behind these things. 

@@ -1,0 +1,75 @@
+html {
+    font-size: 10px;
+   /* background: #320b5b;*/
+   background: #000;
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+        radial-gradient(white, rgba(30, 26, 243, 0.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(252, 245, 42, 0.1) 2px, transparent 40px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: starfield 20s linear infinite;
+}
+
+@keyframes starfield {
+    from {
+        background-position: 0 0, 40px 60px, 130px 270px;
+    }
+
+    to {
+        background-position: -550px 0, -350px 60px, -250px 270px;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.key {
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: .8rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all 0.09s ease-in-out;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 .20rem rgb(92, 72, 226);
+}
+
+.key:hover {
+    background: rgb(92, 72, 226);
+}
+
+.playing {
+    transform: scale(0.9);
+    border-color: #ffffff;
+    box-shadow: 0 0 1rem #ffffff;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: rgb(161, 168, 237);
+}
