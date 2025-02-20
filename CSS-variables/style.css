@@ -2,12 +2,11 @@
 
 :root {
     --base: #6f55f7;
-    --spacing: 10px;
+    --spacing: 0px;
     --blur: 5px;
     --range-track-color: #f9f8f0;
     --range-thumb-color: #ead;
 }
-
 
 body {
     color: #f9f8f0;
@@ -19,7 +18,7 @@ body {
     padding: 30px;
     height: 100vh;
     margin: 0 auto;
-    font-family: 'poppins', sans-serif;
+    font-family: poppins, sans-serif;
     line-height: 1;
     background: var(--base);
     gap: 20px;
@@ -86,20 +85,39 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .img-box {
+    position: relative;
     width: 300px;
     height: 300px;
     filter: blur(var(--blur));
+    rotate: 0deg;
+    transition: all 0.5s ease-in-out;
+    border-radius: 70px;
+  
+}
+
+.img-box:hover img {
+    rotate: 10deg;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #c2bce3;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+    border-radius: 70px;
 }
 
 img {
-    border-radius: 20px;
+    border-radius: 70px;
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding: var(--spacing);
-    transform-origin: 50% 50%;
     box-sizing: border-box;
-
+    transition: rotate 0.5s ease-in-out;
 }
 
 h1 {
