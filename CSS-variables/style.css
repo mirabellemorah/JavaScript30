@@ -1,0 +1,112 @@
+:root {
+    --base: #6f55f7;
+    --spacing: 10px;
+    --blur: 5px;
+    --range-track-color: #f9f8f0;
+    --range-thumb-color: #ead;
+}
+
+
+body {
+    color: #f9f8f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'poppins', sans-serif;
+    line-height: 1;
+    background: var(--base);
+    gap: 20px;
+}
+
+/*
+::-webkit-slider-thumb → Styles the thumb (the moving circle).
+
+-webkit-appearance: none; → Removes the default look.
+
+width: 20px; height: 20px; → Makes the thumb bigger and easier to grab.
+
+background: var(--range-thumb-color); → Uses a variable color.
+
+border-radius: 50%; → Makes it a perfect circle.
+
+cursor: pointer; → Changes the mouse cursor to a pointer (🖱️) when hovering.
+
+margin-top: -6px; → Adjusts positioning so it sits nicely on the track.
+*/
+
+input[type="range"] {
+    -webkit-appearance: none;
+    /* Remove default browser styling */
+    width: 20%;
+    /* Make it stretch across the container */
+    height: 7px;
+    /* Set the height of the slider */
+    background: transparent;
+    /* Remove default background */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: var(--range-track-color);
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--range-thumb-color);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+    /* Adjust to align with the track */
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: var(--range-track-color);
+    border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--range-thumb-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img-box {
+    width: 300px;
+    height: 300px;
+    filter: blur(var(--blur));
+}
+
+img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: var(--spacing);
+    transform-origin: 50% 50%;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    color: #f9f8f0;
+    font-size: 10vw;
+    text-align: center;
+}
+
+input {
+
+    margin-bottom: 10px;
+}

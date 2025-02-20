@@ -83,3 +83,46 @@ L L K : /G H J K : J G A K H
 Day 2
 Oh God I don't even understand what is going on with the clock thing. It's working but I don't get the full
 logic behind these things. 
+
+Day 3
+
+What's learned:
+
+-webkit- is a browser prefix used to style elements in WebKit-based browsers like Google Chrome, Safari, and newer versions of Edge.
+
+🔹 Some CSS properties aren’t fully standardized, so browsers add their own versions using prefixes like:
+
+-webkit- → for Chrome, Safari
+-moz- → for Firefox
+-ms- → for Internet Explorer / Edge (old versions)
+
+👉 -webkit-appearance: none; removes the default browser styles for sliders, buttons, 
+and form elements in WebKit browsers.
+
+Is appearance a Property Name?
+Yes! appearance is a CSS property that controls how an element looks based on the browser’s default UI style.
+
+How appearance Works:
+appearance: none; → Removes default browser styling.
+appearance: button; → Makes an element look like a button.
+appearance: textfield; → Makes an element look like a text input.
+👉 When we use appearance: none;, we disable the browser’s built-in styles so we can customize the element fully.
+
+Difference Between appearance and visibility
+Property	What It Does	Example
+appearance	Controls whether an element looks like a default UI component (button, text field, etc.)	appearance: none; removes default styles
+visibility	Controls whether an element is visible or hidden (but still takes up space)	visibility: hidden; hides the element but keeps its space
+
+.hidden-element {
+    visibility: hidden; /* The element is invisible but still exists */
+}
+
+.hidden-element {
+    display: none; /* The element is removed from the layout */
+}
+
+🔥 TL;DR
+-webkit- is a browser prefix needed for Chrome & Safari.
+appearance is a CSS property that controls how UI elements look.
+visibility controls whether something is seen or hidden, but it still takes up space.
+If you want to completely remove an element, use display: none; instead of visibility: hidden;.
