@@ -41,6 +41,7 @@ margin-top: -6px; → Adjusts positioning so it sits nicely on the track.
 */
 
 input[type="range"] {
+    appearance: none;
     -webkit-appearance: none;
     /* Remove default browser styling */
     width: 20%;
@@ -92,7 +93,7 @@ input[type="range"]::-moz-range-thumb {
     rotate: 0deg;
     transition: all 0.5s ease-in-out;
     border-radius: 70px;
-  
+
 }
 
 .img-box:hover img {
