@@ -87,7 +87,7 @@
         }
 
         .panel.open-active>*:first-child {
-            transform: translateY(0);
+            transform: translateY(80%);
         }
 
         .panel>*:last-child {
@@ -95,7 +95,7 @@
         }
 
         .panel.open-active>*:last-child {
-            transform: translateY(0);
+            transform: translateY(-80%);
         }
 
         .panel.open {
@@ -118,9 +118,9 @@
             }
 
             .panel.open {
-            flex: 5;
-            font-size: 30px;
-        }
+                flex: 5;
+                font-size: 30px;
+            }
 
         }
     </style>
@@ -131,33 +131,33 @@
     <div class="panels">
 
         <div class="panel panel1">
-            <P>Live</P>
-            <P>As</P>
-            <P>One</P>
+            <P>live</P>
+            <P>as</P>
+            <P>one</P>
         </div>
 
         <div class="panel panel2">
-            <P>Enjoy</P>
-            <P>Your</P>
-            <P>Days</P>
+            <P>enjoy</P>
+            <P>your</P>
+            <P>days</P>
         </div>
 
         <div class="panel panel3">
-            <P>Nuture</P>
-            <P>Nature</P>
-            <P>Within</P>
+            <P>nuture</P>
+            <P>nature</P>
+            <P>within</P>
         </div>
 
         <div class="panel panel4">
-            <P>Love</P>
-            <P>One</P>
-            <P>Another</P>
+            <P>love</P>
+            <P>one</P>
+            <P>another</P>
         </div>
 
         <div class="panel panel5">
-            <P>Be</P>
-            <P>Free</P>
-            <P>Minded</P>
+            <P>be</P>
+            <P>free</P>
+            <P>minded</P>
         </div>
     </div>
 
@@ -173,7 +173,6 @@
             if (e.propertyName.includes("flex"))
                 this.classList.toggle("open-active");
         }
-
 
         panels.forEach(panel => panel.addEventListener("click", toggleOpen)); // look through all the panels, listen for a click event and then run the toggleOpen function
         panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
