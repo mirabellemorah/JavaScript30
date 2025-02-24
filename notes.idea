@@ -79,10 +79,13 @@ and understand more about the javascript I just wrote
 
 L L K : /G H J K : J G A K H 
 
+###############################################################
 
 Day 2
 Oh God I don't even understand what is going on with the clock thing. It's working but I don't get the full
 logic behind these things. 
+
+###############################################################
 
 Day 3
 
@@ -125,4 +128,11 @@ visibility	Controls whether an element is visible or hidden (but still takes up 
 -webkit- is a browser prefix needed for Chrome & Safari.
 appearance is a CSS property that controls how UI elements look.
 visibility controls whether something is seen or hidden, but it still takes up space.
-If you want to completely remove an element, use display: none; instead of visibility: hidden;.
+If you want to completely remove an element, use display: none; instead of visibility: hidden;
+
+
+###############################################################
+
+Day 5
+
+The selector .panel > * applies styles to all direct children of an element with the class .panel.

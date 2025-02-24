@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱Climate change facts</title>
+
+    <link rel="preload" href="climate1.jpg" as="image">
+    <link rel="preload" href="climate2.jpg" as="image">
+    <link rel="preload" href="climate3.jpg" as="image">
+    <link rel="preload" href="climate4.png" as="image">
+    <link rel="preload" href="planet6.jpg" as="image">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+            background-color: #f5f5f5;
+        }
+
+        .panels {
+            position: relative;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .panel {
+            background: #000000;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition:
+                font-size 1.5s cubic-bezier(0.61, -0.19, 0.7, -0.71),
+                flex 2s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+                background 1.5s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .panel1 {
+            background-image: url(climate1.jpg);
+        }
+
+        .panel2 {
+            background-image: url(climate3.jpg);
+        }
+
+        .panel3 {
+            background-image: url(Planet5.png);
+        }
+
+        .panel4 {
+            background-image: url(planet6.jpg);
+        }
+
+        .panel5 {
+            background-image: url(climate4.png);
+        }
+
+        /* Flex Items */
+
+        .panel>* {
+            margin: 0;
+            width: 100%;
+            transition: transform 0.5s;
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .panel>*:first-child {
+            transform: translateY(-100%);
+        }
+
+        .panel.open-active>*:first-child {
+            transform: translateY(0);
+        }
+
+        .panel>*:last-child {
+            transform: translateY(100%);
+        }
+
+        .panel.open-active>*:last-child {
+            transform: translateY(0);
+        }
+
+        .panel.open {
+            flex: 5;
+            font-size: 40px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            body {
+                font-size: 15px;
+            }
+
+            .panels {
+                flex-direction: column;
+            }
+
+            .panel {
+                overflow: hidden;
+            }
+
+            .panel.open {
+            flex: 5;
+            font-size: 30px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="panels">
+
+        <div class="panel panel1">
+            <P>Live</P>
+            <P>As</P>
+            <P>One</P>
+        </div>
+
+        <div class="panel panel2">
+            <P>Enjoy</P>
+            <P>Your</P>
+            <P>Days</P>
+        </div>
+
+        <div class="panel panel3">
+            <P>Nuture</P>
+            <P>Nature</P>
+            <P>Within</P>
+        </div>
+
+        <div class="panel panel4">
+            <P>Love</P>
+            <P>One</P>
+            <P>Another</P>
+        </div>
+
+        <div class="panel panel5">
+            <P>Be</P>
+            <P>Free</P>
+            <P>Minded</P>
+        </div>
+    </div>
+
+    <Script>
+
+        const panels = document.querySelectorAll(".panel");
+
+        function toggleOpen() {
+            this.classList.toggle("open");
+        }
+
+        function toggleActive(e) {
+            if (e.propertyName.includes("flex"))
+                this.classList.toggle("open-active");
+        }
+
+
+        panels.forEach(panel => panel.addEventListener("click", toggleOpen)); // look through all the panels, listen for a click event and then run the toggleOpen function
+        panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
+
+    </Script>
+
+</body>
+
+</html>
