@@ -33,33 +33,37 @@ keys.forEach(key => key.addEventListener("click", playSound));
 
 ////////////################////////////
 
-// function playSound(e) {
+/*
 
-//    const audio = this.document.querySelector(`audio[data-key="${e.code}"]`);
-//    const key = this.document.querySelector(`.key[data-key="${e.code}"]`);
+function playSound(e) {
 
-//    if (!audio) return; // stop the function
+const audio = this.document.querySelector(`audio[data-key="${e.code}"]`);
+const key = this.document.querySelector(`.key[data-key="${e.code}"]`);
 
-//   audio.currentTime = 0; // rewind to the start
+if (!audio) return; // stop the function
 
-//    audio.play();
-//    key.classList.add("playing");
-// };
+audio.currentTime = 0; // rewind to the start
 
-// function removeTransition(e) {
+    audio.play();
+    key.classList.add("playing");
+ };
 
-//  if (e.propertyName !== "transform") return; // skip if it's not a transform
-// this.classList.remove("playing");
-// };
+ function removeTransition(e) {
 
-// const keys = document.querySelectorAll(".key");
-// ; ''
-// keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+  if (e.propertyName !== "transform") return; // skip if it's not a transform
+ this.classList.remove("playing");
+ };
 
-// window.addEventListener("keydown", playSound);
+ const keys = document.querySelectorAll(".key");
+ ; ''
+ keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+ window.addEventListener("keydown", playSound);
 
 //How It Works
 //Press a key (e.g., "A").
 //The function finds the matching sound and key element.
 //The sound plays, and an animation is added.
 //When the animation ends, it gets removed so it's ready for the next press.
+
+*/
